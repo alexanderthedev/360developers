@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitbd410e76325c1389128b3f75330f1b1d
+class ComposerStaticInit972596524d703575cc8dc8cc24080509
 {
     public static $files = array (
         '253c157292f75eb38082b5acb06f3f01' => __DIR__ . '/..' . '/nikic/fast-route/src/functions.php',
@@ -13,6 +13,7 @@ class ComposerStaticInitbd410e76325c1389128b3f75330f1b1d
     public static $prefixLengthsPsr4 = array (
         'S' => 
         array (
+            'Slim\\Views\\' => 11,
             'Slim\\' => 5,
         ),
         'P' => 
@@ -30,6 +31,10 @@ class ComposerStaticInitbd410e76325c1389128b3f75330f1b1d
     );
 
     public static $prefixDirsPsr4 = array (
+        'Slim\\Views\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/slim/twig-view/src',
+        ),
         'Slim\\' => 
         array (
             0 => __DIR__ . '/..' . '/slim/slim/Slim',
@@ -49,6 +54,13 @@ class ComposerStaticInitbd410e76325c1389128b3f75330f1b1d
     );
 
     public static $prefixesPsr0 = array (
+        'T' => 
+        array (
+            'Twig_' => 
+            array (
+                0 => __DIR__ . '/..' . '/twig/twig/lib',
+            ),
+        ),
         'P' => 
         array (
             'Pimple' => 
@@ -61,9 +73,9 @@ class ComposerStaticInitbd410e76325c1389128b3f75330f1b1d
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitbd410e76325c1389128b3f75330f1b1d::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitbd410e76325c1389128b3f75330f1b1d::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitbd410e76325c1389128b3f75330f1b1d::$prefixesPsr0;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit972596524d703575cc8dc8cc24080509::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit972596524d703575cc8dc8cc24080509::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit972596524d703575cc8dc8cc24080509::$prefixesPsr0;
 
         }, null, ClassLoader::class);
     }
